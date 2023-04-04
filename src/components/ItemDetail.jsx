@@ -23,17 +23,20 @@ const ItemDetail = () => {
       <div className="row">
         <div className="col-md-6">
           <div className="card mb-4 shadow-sm">
+            <div className="card-img">
             <img
-              className="card-img-top"
+              
               src={`https://picsum.photos/200?random=${post.id}`}
               alt=""
             />
-            <div className="card-body">
-            <p className="card-text">
-                <small className="text-muted">User ID: {post.userId}</small>
-              </p>
-              <h5 className="card-title">Title:{post.title}</h5>
-              <p className="card-text">Details:{post.body}</p>
+            </div>
+            
+            <div className="card-body1">
+            <h4 className="card-text">
+               User ID: <span className="card-t2" style={{color: "darkorange",}}> {post.userId}</span>
+              </h4>
+              <h5 className="card-title" style={{color: "chocolate"}}>Title: <span className="card-t2" style={{color: "black"}}> {post.title}</span></h5>
+              <p className="card-text" style={{color: "blue", fontWeight:"bolder"}}>Details:  <span className="card-t" style={{color: "black"}}> {post.body}</span></p>
               
             </div>
           </div>

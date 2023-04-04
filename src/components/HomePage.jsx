@@ -15,7 +15,7 @@ const Home = () => {
  
   return (
     <div className="container">
-      <h1 className="text-center head-text" >Safarnama</h1>
+      <h1 className="text-center head-text" >Tour Your Heart</h1>
       <div className="row">
         {posts.map((post) => (
           <div className="col-md-4" key={post.id}>
@@ -28,12 +28,12 @@ const Home = () => {
                 />
 
               </div>
-              <div className="card-body">
+              <Link to={`/item/${post.id}`}><div className="card-body" to={`/item/${post.id}`}>
               <h4 className="card-title">UserID : {post.id}</h4>
-                <h5 className="card-title">Title : {post.title}</h5>
-                <p className="card-text">Details : {post.body.slice(0, 100)}...</p>
+                <h5 className="card-title">Title : {post.title.slice(1,8  )} ...</h5>
+                <p className="card-text">Details : {post.body.slice(0, 80)}...</p>
                 <Link to={`/item/${post.id}`}>Read More...</Link>
-              </div>
+              </div> </Link>
             </div>
           </div>
         ))}
